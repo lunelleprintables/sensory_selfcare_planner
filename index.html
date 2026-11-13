@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lunelle Sensory Self-Care Planner | Neurodivergent Somatic Sanctuary &amp; Overload Recovery Kit</title>
+<meta name="description" content="An 11-page printable somatic workbook, sensory profile audit, and emergency overload recovery kit for ADHD, Autistic, AuDHD & sensitive minds. US Letter & A4.">
+<meta property="og:title" content="Lunelle Sensory Self-Care Planner & Overload Recovery Kit">
+<meta property="og:description" content="Gentle nervous system planning. 11 printable sheets, 8-senses audit, stimming menu, and emergency non-verbal cards.">
+<meta property="og:type" content="website">
+
+<!-- Fonts: Lora (Serif) & Figtree (Sans) per Lunelle Design System -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+/* ================================================================= */
+/* 1. LUNELLE CANONICAL DESIGN SYSTEM TOKENS                         */
+/* ================================================================= */
+:root {
+  /* Primary Inks */
+  --ink: #4C3550;            /* Deep plum-blackberry for H1, H2, key text */
+  --ink-soft: #6D5A77;       /* Muted plum for readable body text */
+  --ink-sub: #9A6F8F;        /* Dusty mauve for prompts & italic subtitles */
+  --ink-faint: #B58AA6;      /* Soft lilac-grey for microtext & captions */
+
+  /* Backgrounds & Gradient Surface */
+  --bg-top: #FEF7EB;         /* Warm morning vanilla-gold (100% top) */
+  --bg-mid: #FAF4EB;         /* Soft warm cream (50% center) */
+  --bg-bottom: #F2E7F2;      /* Soft pink-lavender (0% bottom) */
+  --card-bg: #FFFFFF;        /* Pure floating card surface */
+
+  /* Category Pastels & Accents */
+  --teal: #2B8E8D;           /* Sea breeze teal / primary calm */
+  --teal-dark: #206D6C;      /* Deep interactive teal for hover */
+  --teal-pale: #EBF7F7;      /* Subtle mint tint */
+  --gold: #E0A93E;           /* Canonical Lunelle warm gold */
+  --gold-soft: #F6EAD4;      /* Soft butter gold */
+  --gold-text: #8C590E;      /* Contrast gold text */
+  --rose: #F0D5D7;           /* Dusty rose pale */
+  --rose-text: #B76E9B;      /* Deep rose text */
+  --lavender: #DAD3ED;       /* Soft lilac lavender */
+  --lavender-text: #7D6B9E;  /* Night plum text */
+
+  /* Guides & Borders */
+  --line: rgba(76, 53, 80, 0.10);
+  --line-dotted: #E9D9BA;    /* Warm sand dotted/dashed lines */
+  --shadow: 0 4px 20px rgba(76, 53, 80, 0.06);
+  --shadow-hover: 0 12px 32px rgba(76, 53, 80, 0.12);
+
+  /* Typography */
+  --serif: "Lora", Georgia, serif;
+  --sans: "Figtree", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 40%, var(--bg-bottom) 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 4px; }
+
+.wrap {
+  width: min(1140px, 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+/* TYPOGRAPHY */
+h1, h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+}
+h1 { font-size: clamp(2.35rem, 5.2vw, 3.85rem); }
+h2 { font-size: clamp(1.85rem, 3.4vw, 2.65rem); }
+
+h3, h4 {
+  font-family: var(--sans);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  color: var(--ink);
+}
+h3 { font-size: 1.35rem; }
+h4 { font-size: 1.12rem; }
+
+p { margin: 0; }
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* GOLD PILL ACCENT RULE */
+.gold-pill {
+  width: 50px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin: 1.25rem 0 1.5rem 0;
+}
+.gold-pill.center { margin-inline: auto; }
+
+/* BADGES & CAPSULES */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(76, 53, 80, 0.12);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.95rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(76, 53, 80, 0.04);
+}
+.pill-badge.launch {
+  background: var(--gold-soft);
+  border-color: var(--gold);
+  color: var(--gold-text);
+  font-weight: 700;
+}
+.pill-badge.teal {
+  background: var(--teal-pale);
+  border-color: var(--teal);
+  color: var(--teal-dark);
+}
+
+/* BUTTONS — 100% SINGLE LINE WITH NO WRAPPING */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.02rem;
+  text-decoration: none;
+  background: var(--teal);
+  color: #FFFFFF;
+  padding: 0.9rem 1.65rem;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  white-space: nowrap; /* CRITICAL: Never break text or price into multiple lines */
+  box-shadow: 0 6px 20px rgba(43, 142, 141, 0.28);
+  transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-align: center;
+}
+.btn:hover {
+  background: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(43, 142, 141, 0.34);
+}
+.btn.small {
+  padding: 0.55rem 1.25rem;
+  font-size: 0.92rem;
+  box-shadow: none;
+}
+.btn.gold {
+  background: var(--gold);
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(224, 169, 62, 0.3);
+}
+.btn.gold:hover {
+  background: #C99533;
+  transform: translateY(-2px);
+}
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+  padding: 0.85rem 1.45rem;
+  font-size: 0.95rem;
+  box-shadow: none;
+}
+.btn.ghost:hover {
+  background: rgba(76, 53, 80, 0.05);
+  transform: none;
+}
+
+/* FLOATING CARD CONTAINER */
+.card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px 28px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* ================================================================= */
+/* 2. REFINED HEADER NAVIGATION (SLEEK, NO-WRAP, 2-ROW BRAND)        */
+/* ================================================================= */
+header.top {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(254, 247, 235, 0.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding: 0.75rem 0;
+}
+header.top .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: nowrap; /* Keep header strictly on 1 row */
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.brand-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 12px rgba(76, 53, 80, 0.12);
+  flex-shrink: 0;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column; /* Line 1: Lunelle, Line 2: Slogan directly underneath */
+  justify-content: center;
+  line-height: 1.15;
+}
+.brand-text-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.32rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.brand-text-tag {
+  font-size: 0.78rem;
+  color: var(--ink-sub);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* CLEAN CAPSULE MENU */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(76, 53, 80, 0.08);
+  box-shadow: 0 2px 8px rgba(76, 53, 80, 0.03);
+  flex-shrink: 1;
+}
+.nav-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap; /* Never split menu item words */
+  transition: all 0.18s ease;
+}
+.nav-link:hover {
+  color: var(--teal-dark);
+  background: rgba(43, 142, 141, 0.08);
+}
+.nav-link.highlight {
+  color: var(--gold-text);
+  font-weight: 700;
+}
+.nav-link.highlight:hover {
+  background: rgba(224, 169, 62, 0.12);
+}
+
+.header-cta-wrap {
+  flex-shrink: 0;
+}
+
+/* ================================================================= */
+/* 3. HERO SECTION (LUNELLE WITHOUT BACKGROUND BOX)                  */
+/* ================================================================= */
+section.hero {
+  padding: 3.5rem 0 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  margin-top: 2rem;
+}
+.hero-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--line-dotted);
+  font-size: 0.88rem;
+  color: var(--ink-sub);
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* HERO VISUAL — NO ENCLOSING WHITE BOX, TRANSPARENT STICKER FLOATING */
+.hero-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.hero-mascot-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.hero-mascot-img {
+  width: 250px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  /* Soft organic shadow under transparent die-cut sticker */
+  filter: drop-shadow(0 18px 36px rgba(76, 53, 80, 0.16));
+  animation: floatMascot 4s ease-in-out infinite alternate;
+}
+@keyframes floatMascot {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+.hero-cards-floating {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-card-snip {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px 16px;
+  box-shadow: 0 6px 20px rgba(76, 53, 80, 0.06);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ================================================================= */
+/* 4. THE PROBLEM SECTION (SENSORY OVERWHELM)                        */
+/* ================================================================= */
+section.problem {
+  padding: 5rem 0;
+  background: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.quote-box {
+  background: var(--card-bg);
+  border-left: 4px solid var(--teal);
+  border-radius: 0 20px 20px 0;
+  padding: 28px 36px;
+  box-shadow: var(--shadow);
+  margin-bottom: 3.5rem;
+}
+.quote-box blockquote {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  line-height: 1.4;
+  color: var(--ink);
+}
+.quote-author {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--ink-sub);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+.breakdown-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.breakdown-card h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.18rem;
+  color: var(--ink);
+}
+
+/* ================================================================= */
+/* 5. THE 8 SENSES FRAMEWORK                                         */
+/* ================================================================= */
+section.senses {
+  padding: 5.5rem 0;
+}
+.sec-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+}
+.senses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.sense-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sense-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.sense-emoji { font-size: 1.6rem; }
+.sense-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--bg-mid);
+  color: var(--ink-sub);
+}
+.sense-card h4 {
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.sense-card p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.sense-card .remedy {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line-dotted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--teal-dark);
+}
+
+/* ================================================================= */
+/* 6. WHAT'S INSIDE (THE 11 MASTER PRINTABLE PAGES)                  */
+/* ================================================================= */
+section.inside {
+  padding: 5.5rem 0;
+  background: rgba(242, 231, 242, 0.45);
+}
+.pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.page-item-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.page-item-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--teal);
+}
+.page-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--teal-dark);
+}
+.page-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 6px 0 8px 0;
+}
+.page-desc {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  flex: 1;
+}
+.page-pill-row {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line-dotted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--ink-sub);
+}
+
+/* ================================================================= */
+/* 7. LIVE WEB COMPANION & AUDIO SYNTHESIZER                         */
+/* ================================================================= */
+section.audio-tool {
+  padding: 5.5rem 0;
+}
+.audio-card {
+  background: linear-gradient(135deg, #FAF4EB 0%, #FFFFFF 100%);
+  border: 1.5px solid var(--gold-soft);
+  border-radius: 24px;
+  padding: 36px 40px;
+  box-shadow: var(--shadow);
+}
+.audio-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.sound-buttons-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.sound-btn {
+  padding: 0.75rem 1.45rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--gold);
+  background: #FFFFFF;
+  color: var(--gold-text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+.sound-btn.active {
+  background: var(--gold);
+  color: #FFFFFF;
+}
+.sound-btn:hover:not(.active) {
+  background: var(--gold-soft);
+}
+.sos-live-btn {
+  background: #FFF0F0;
+  border: 1.5px solid #E67A7A;
+  color: #C0392B;
+}
+.sos-live-btn:hover { background: #FFDADA; }
+
+/* ================================================================= */
+/* 8. INVESTOR & BUSINESS BRIEFING (VENTURE PITCH & UNIT ECONOMICS)  */
+/* ================================================================= */
+section.investor {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #FAF4EB 0%, #F5ECF4 100%);
+  border-top: 2px solid var(--gold);
+  border-bottom: 1px solid var(--line);
+}
+.deck-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 40px 48px;
+  box-shadow: 0 14px 40px rgba(76, 53, 80, 0.09);
+  border: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+.investor-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.kpi-box {
+  background: var(--bg-mid);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  text-align: center;
+}
+.kpi-num {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 2.1rem;
+  color: var(--teal-dark);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.kpi-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.biz-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+.pillar-card {
+  background: var(--bg-top);
+  border-radius: 16px;
+  padding: 22px;
+  border: 1px solid var(--line-dotted);
+}
+.pillar-card h4 {
+  color: var(--ink);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.pillar-card p {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* ================================================================= */
+/* 9. PRICING & COMMERCIAL PACKAGES (CLEAN BUTTONS IN 1 ROW)         */
+/* ================================================================= */
+section.pricing {
+  padding: 5.5rem 0;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1.75rem;
+  align-items: stretch;
+  margin-top: 3rem;
+}
+.pricing-card {
+  background: #FFFFFF;
+  border-radius: 22px;
+  padding: 34px 22px;
+  border: 1.5px solid var(--line);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.pricing-card .btn {
+  font-size: 0.92rem;
+  padding: 0.85rem 0.85rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.pricing-card.featured {
+  border-color: var(--teal);
+  box-shadow: 0 12px 36px rgba(43, 142, 141, 0.18);
+  transform: translateY(-6px);
+  background: radial-gradient(circle at 50% 0%, #F5FBFA 0%, #FFFFFF 60%);
+}
+.popular-ribbon {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--teal);
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(43, 142, 141, 0.3);
+  white-space: nowrap;
+}
+.price-val {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 2.85rem;
+  color: var(--ink);
+  line-height: 1;
+  margin: 1rem 0 0.5rem 0;
+}
+.price-period {
+  font-size: 0.88rem;
+  color: var(--ink-sub);
+}
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+/* ================================================================= */
+/* 10. REVIEWS & COMMUNITY VOICES                                    */
+/* ================================================================= */
+section.reviews {
+  padding: 5rem 0;
+  background: rgba(255, 255, 255, 0.6);
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+.review-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.review-quote {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+.user-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+.user-meta {
+  font-size: 0.78rem;
+  color: var(--ink-sub);
+}
+
+/* ================================================================= */
+/* 11. FAQ SECTION & DISCLAIMER                                      */
+/* ================================================================= */
+section.faq {
+  padding: 5.5rem 0;
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.faq-item {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.faq-item h4 {
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.faq-item p {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.disclaimer-box {
+  margin-top: 3.5rem;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px 24px;
+  border: 1px dashed var(--line-dotted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--ink-sub);
+}
+
+/* ================================================================= */
+/* 12. FOOTER                                                        */
+/* ================================================================= */
+footer.bottom {
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+  background: var(--bg-mid);
+  font-size: 0.88rem;
+  color: var(--ink-sub);
+}
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .hero-copy { align-items: center; }
+  .hero-trust-bar { justify-content: center; }
+  .breakdown-grid, .senses-grid, .kpi-grid, .biz-pillars, .reviews-grid, .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav-links { display: none; }
+}
+
+/* SOS OVERLAY */
+.sos-overlay {
+  position: fixed;
+  inset: 0;
+  background: #171513;
+  color: #F2E8D8;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+.sos-overlay.active { display: flex; }
+.breathe-ring {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14pt;
+  font-weight: 600;
+  color: var(--gold);
+  animation: pulseBreathe 8s infinite ease-in-out;
+}
+@keyframes pulseBreathe {
+  0%, 100% { transform: scale(0.88); opacity: 0.55; }
+  50% { transform: scale(1.35); opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- ================================================================= -->
+<!-- REFINED HEADER NAVIGATION                                         -->
+<!-- ================================================================= -->
+<header class="top">
+  <div class="wrap">
+    <!-- Brand with 2 rows: Line 1 = Lunelle, Line 2 = Slogan underneath -->
+    <a href="#" class="brand">
+      <img src="assets/lunelle_avatar.png" alt="Lunelle Avatar" class="brand-avatar">
+      <div class="brand-text">
+        <span class="brand-text-name">Lunelle</span>
+        <span class="brand-text-tag">Sensory Self-Care Sanctuary</span>
+      </div>
+    </a>
+
+    <!-- Clean capsule menu (No wrapping words, elegant horizontal pills) -->
+    <nav class="nav-links">
+      <a href="#problem" class="nav-link">Why Lunelle</a>
+      <a href="#senses" class="nav-link">The 8 Senses</a>
+      <a href="#inside" class="nav-link">Worksheets</a>
+      <a href="#web-companion" class="nav-link">Web Audio</a>
+      <a href="#investor" class="nav-link highlight">Investor Deck ↗</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+    </nav>
+
+    <!-- Header CTA in 1 single line -->
+    <div class="header-cta-wrap">
+      <a href="#pricing" class="btn small">Get Digital Kit · $9.50</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================================================================= -->
+<!-- HERO SECTION (TRANSPARENT LUNELLE WITHOUT BOX)                    -->
+<!-- ================================================================= -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="pill-badge launch">✦ Phase 2 Release · Somatosensory Planning Suite ✦</span>
+        <h1 style="margin-top: 1rem;">When the world is too loud, planning needs a softer sanctuary.</h1>
+        <div class="gold-pill"></div>
+        <p class="lead">
+          An 11-page printable somatic workbook, sensory profile audit, and emergency overload rescue system. Designed specifically for ADHD, Autistic, AuDHD, HSP, and deeply sensitive nervous systems.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#pricing" class="btn">
+            📥 Instant Download Kit · $9.50
+          </a>
+          <a href="#web-companion" class="btn ghost">
+            🎧 Try Live Acoustic Generator
+          </a>
+        </div>
+
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <span>📄</span> <strong>US Letter &amp; A4 Printables</strong>
+          </div>
+          <div class="trust-item">
+            <span>📱</span> <strong>GoodNotes / iPad Compatible</strong>
+          </div>
+          <div class="trust-item">
+            <span>🌿</span> <strong>Zero-Guilt &amp; Anti-Streak</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual: Floating Transparent Mascot & Ambient Pill Cards -->
+      <div class="hero-visual">
+        <div class="hero-mascot-wrap">
+          <img src="assets/sticker_14_music.png" alt="Lunelle with Headphones" class="hero-mascot-img">
+        </div>
+        
+        <div class="hero-cards-floating">
+          <div class="hero-card-snip">
+            <span style="font-size: 1.4rem;">🔋</span>
+            <div>
+              <strong style="color:var(--ink);">Sensory Bandwidth Battery:</strong>
+              <div style="font-size: 0.78rem; color: var(--ink-sub);">Catch early overload signals at Level 3 before reaching crisis shutdown.</div>
+            </div>
+          </div>
+
+          <div class="hero-card-snip" style="background: rgba(255, 255, 255, 0.88); border-color: rgba(76, 53, 80, 0.12);">
+            <span style="font-size: 1.4rem;">🤫</span>
+            <div>
+              <strong style="color:var(--ink);">Non-Verbal Wallet SOS Cards:</strong>
+              <div style="font-size: 0.78rem; color: var(--ink-sub);">Show friends or colleagues when your brain cannot process spoken words.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- THE PROBLEM SECTION (WHY REGULAR PLANNERS FAIL)                   -->
+<!-- ================================================================= -->
+<section class="problem" id="problem">
+  <div class="wrap">
+    <div class="quote-box">
+      <blockquote>
+        “Traditional planners assume your nervous system is silent. But when fluorescent lights buzz, seams scratch, and crowds roar, your prefrontal cortex halts. You don’t lack discipline — your senses are simply maxed out.”
+      </blockquote>
+      <div class="quote-author">
+        <img src="assets/sticker_01_star_diecut.png" style="width: 22px; height: 22px;" alt="Star">
+        <span>The Lunelle Neurodivergent Philosophy</span>
+      </div>
+    </div>
+
+    <div class="sec-header">
+      <h2>Why standard productivity triggers sensory burnout</h2>
+      <div class="gold-pill center"></div>
+      <p class="lead">Three physiological friction points that traditional organizers completely overlook:</p>
+    </div>
+
+    <div class="breakdown-grid">
+      <div class="breakdown-card">
+        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">⚡</div>
+        <h3>1. Sensory Load Hijacks Executive Function</h3>
+        <p>When sensory stimuli (glare, noise, tactile discomfort) exceed your processing threshold, your brain enters a low-grade fight-or-flight state. Initiating tasks becomes biologically impossible until sensory safety is restored.</p>
+      </div>
+
+      <div class="breakdown-card">
+        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🫀</div>
+        <h3>2. The Interoception Blindspot</h3>
+        <p>Autistic and ADHD individuals frequently experience delayed internal awareness: forgetting to drink water, ignoring full bladders, or crashing from low blood sugar. Planners without somatic prompts accelerate physical breakdown.</p>
+      </div>
+
+      <div class="breakdown-card">
+        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">⏳</div>
+        <h3>3. The Toxic Habit Streak Spiral</h3>
+        <p>Consecutive daily checkboxes create intense anxiety. Missing one day triggers guilt and causes 84% of neurodivergent users to abandon their planners entirely. Lunelle replaces streaks with energy-based pacing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- THE 8 SENSES FRAMEWORK                                            -->
+<!-- ================================================================= -->
+<section class="senses" id="senses">
+  <div class="wrap">
+    <div class="sec-header">
+      <span class="pill-badge launch">The Occupational Framework</span>
+      <h2 style="margin-top: 0.85rem;">Human beings have 8 sensory systems, not 5.</h2>
+      <div class="gold-pill center"></div>
+      <p class="lead">
+        Our workbook audits your individual neurological blueprint across all 8 modalities, identifying what drains your bandwidth and what refills your reserves:
+      </p>
+    </div>
+
+    <div class="senses-grid">
+      <!-- 1. Visual -->
+      <div class="sense-card">
+        <div>
+          <div class="sense-card-top">
+            <span class="sense-emoji">👁️</span>
+            <span class="sense-tag">Optic</span>
+          </div>
+          <h4>1. Visual</h4>
+          <p>Fluorescent tube flicker, blue screen glare, and visual desk clutter.</p>
+        </div>
+        <div class="remedy">✦ Antidote: 2200K amber lights, dark mode &amp; sunglasses.</div>
+      </div>
+
+      <!-- 2. Auditory -->
+      <div class="sense-card">
+        <div>
+          <div class="sense-card-top">
+            <span class="sense-emoji">👂</span>
+            <span class="sense-tag">Acoustic</span>
+          </div>
+          <h4>2. Auditory</h4>
+          <p>Leaf blowers, chewing sounds, sudden telephone rings, echoing malls.</p>
+        </div>
+        <div class="remedy">✦ Antidote: Loop earplugs, synthetic brown noise, soft lofi.</div>
+      </div>
+
+      <!-- 3. Tactile -->
+      <div class="sense-card">
+        <div>
+          <div class="sense-card-top">
+            <span class="sense-emoji">👕</span>
+            <span class="sense-tag">Somatosensory</span>
+          </div>
+          <h4>3. Tactile</h4>
+          <p>Itchy garment tags, synthetic waistbands, wet shirt cuffs, light tickles.</p>
+        </div>
+        <div class="remedy">✦ Antidote: 100% modal cotton, fleece hoodie, weighted lap pad.</div>
+      </div>
+
+      <!-- 4. Proprioceptive -->
+      <div class="sense-card">
+        <div>
+          <div class="sense-card-top">
+            <span class="sense-emoji">🌊</span>
+            <span class="sense-tag">Deep Muscle</span>
+          </div>
+          <h4>4. Proprioception</h4>
+          <p>Motionless sitting, unsupportive ergonomic chairs, physical restlessness.</p>
+        </div>
+        <div class="remedy">✦ Antidote: 7–10kg weighted blanket, bear hugs, wall push-ups.</div>
+      </div>
+
+      <!-- 5. Vestibular -->
+      <div class="sense-card">
+        <div>
+          <div class="sense-card-top">
+            <span class="sense-emoji">⚖️</span>
+            <span class="sense-tag">Inner Ear</span>
+          </div>
+          <h4>5. Vestibular</h4>
+          <p>Elevator drops, winding taxi rides, rapid visual movement, vertigo.</p>
+        </div>
+        <div class="remedy">✦ Antidote: Gentle rocking chairs, floor grounding, hammocks.</div>
+      </div>
+
+      <!-- 6. Olfactory -->
+      <div class="sense-card">
+        <div>
+          <div class="sense-card-top">
+            <span class="sense-emoji">🌸</span>
+            <span class="sense-tag">Nasal</span>
+          </div>
+          <h4>6. Olfactory</h4>
+          <p>Heavy elevator perfumes, chemical cleaning agents, pungent heated food.</p>
+        </div>
+        <div class="remedy">✦ Antidote: Natural vanilla, fresh pine, pure unscented air.</div>
+      </div>
+
+      <!-- 7. Gustatory / Oral -->
+      <div class="sense-card">
+        <div>
+          <div class="sense-card-top">
+            <span class="sense-emoji">🍵</span>
+            <span class="sense-tag">Oral Stims</span>
+          </div>
+          <h4>7. Gustatory</h4>
+          <p>Unexpected food chunks, slimy textures, sharp bitterness.</p>
+        </div>
+        <div class="remedy">✦ Antidote: Predictable safe foods, crunchy pretzels, warm mugs.</div>
+      </div>
+
+      <!-- 8. Interoception -->
+      <div class="sense-card">
+        <div>
+          <div class="sense-card-top">
+            <span class="sense-emoji">🫀</span>
+            <span class="sense-tag">Autonomic</span>
+          </div>
+          <h4>8. Interoception</h4>
+          <p>Missing thirst and hunger until trembling; postponing the restroom.</p>
+        </div>
+        <div class="remedy">✦ Antidote: Scheduled hydration alarms &amp; gentle body scans.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- WHAT'S INSIDE (THE 11 MASTER PRINTABLE PAGES)                    -->
+<!-- ================================================================= -->
+<section class="inside" id="inside">
+  <div class="wrap">
+    <div class="sec-header">
+      <span class="pill-badge teal">Complete 11-Sheet Printable Architecture</span>
+      <h2 style="margin-top: 0.85rem;">Every sheet is an intentional sanctuary.</h2>
+      <div class="gold-pill center"></div>
+      <p class="lead">
+        Engineered in vector CSS for crisp, high-resolution printing on US Letter and International A4.
+      </p>
+    </div>
+
+    <div class="pages-grid">
+      <!-- 1 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 01</span>
+          <h4 class="page-title">Sanctuary Plate &amp; Welcome Letter</h4>
+          <p class="page-desc">Lunelle's validation letter confirming your sensory sensitivity is biology, not a flaw. Features safe-word anchor and dedication box.</p>
+        </div>
+        <div class="page-pill-row">
+          <span>Dedication &amp; Anchor</span>
+          <span>Sheet 1 / 11</span>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 02</span>
+          <h4 class="page-title">The 8 Senses Landscape &amp; Profile</h4>
+          <p class="page-desc">Comprehensive audit across all 8 modalities with custom Seeking vs. Avoiding sliders, trigger logs, and personalized sensory reliefs.</p>
+        </div>
+        <div class="page-pill-row">
+          <span>8-Modality Audit</span>
+          <span>Sheet 2 / 11</span>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 03</span>
+          <h4 class="page-title">Sensory Bandwidth Radar</h4>
+          <p class="page-desc">5-tier energy battery from Level 5 Green (Resilient) to Level 1 Crimson (Shutdown). Teaches you to execute an emergency pivot at Level 3.</p>
+        </div>
+        <div class="page-pill-row">
+          <span>Overload Prevention</span>
+          <span>Sheet 3 / 11</span>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 04</span>
+          <h4 class="page-title">Everyday Toolkit &amp; Safe Haven</h4>
+          <p class="page-desc">Portable go-bag checklist (Loop earplugs, tinted lenses, mints, worry stones) and home low-stimulus bunker layout guide.</p>
+        </div>
+        <div class="page-pill-row">
+          <span>Comfort Architecture</span>
+          <span>Sheet 4 / 11</span>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 05</span>
+          <h4 class="page-title">Stimming &amp; Somatic Regulation Menu</h4>
+          <p class="page-desc">Zero-shame stimming menu: down-regulating calming stims, up-regulating focus igniters for ADHD paralysis, and deep proprioceptive work.</p>
+        </div>
+        <div class="page-pill-row">
+          <span>Nervous System Medicine</span>
+          <span>Sheet 5 / 11</span>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 06</span>
+          <h4 class="page-title">SOS Rescue Runway &amp; Wallet Cards</h4>
+          <p class="page-desc">4-step crash landing protocol (Shield → Ground → Non-Verbal → Glimmer) plus 2 cut-out wallet cards for when you can’t speak.</p>
+        </div>
+        <div class="page-pill-row">
+          <span>Emergency Protocol</span>
+          <span>Sheet 6 / 11</span>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 07</span>
+          <h4 class="page-title">Interoception &amp; Somatic Body Scanner</h4>
+          <p class="page-desc">Head-to-toe somatic check-in (jaw, shoulders, gut, hydration, bladder, temperature) with 4 daily micro-scan stamps (Morning to Night).</p>
+        </div>
+        <div class="page-pill-row">
+          <span>Internal Signals</span>
+          <span>Sheet 7 / 11</span>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 08</span>
+          <h4 class="page-title">Sensory-Friendly Daily Compass</h4>
+          <p class="page-desc">Undated daily spread organized by sensory spoons instead of rigid clock timers. Includes 3 sensory runways and 3 daily sensory glimmers.</p>
+        </div>
+        <div class="page-pill-row">
+          <span>Paced Daily Sheet</span>
+          <span>Sheet 8 / 11</span>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 09</span>
+          <h4 class="page-title">Weekly Pacing &amp; Spoon Budget</h4>
+          <p class="page-desc">Forecast high-stim events (dentist, superstore, family dinner) and block mandatory low-stim recovery buffers to prevent sensory debt.</p>
+        </div>
+        <div class="page-pill-row">
+          <span>Energy Forecasting</span>
+          <span>Sheet 9 / 11</span>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 10</span>
+          <h4 class="page-title">Safe Foods &amp; Sleep Sanctuary</h4>
+          <p class="page-desc">Zero-effort safe nourishment matrix when food textures cause nausea + bedroom sensory wind-down checklist for restorative sleep.</p>
+        </div>
+        <div class="page-pill-row">
+          <span>Nourishment &amp; Rest</span>
+          <span>Sheet 10 / 11</span>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="page-item-card">
+        <div>
+          <span class="page-num">Page 11</span>
+          <h4 class="page-title">Permission Badges &amp; Bookmarks</h4>
+          <p class="page-desc">6 cut-out affirmation slips with Lunelle artwork (“It’s okay to wear earplugs in public”) + 2 pull-out bookmarks for your planner.</p>
+        </div>
+        <div class="page-pill-row">
+          <span>Validating Mantras</span>
+          <span>Sheet 11 / 11</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- LIVE WEB COMPANION & AUDIO SYNTHESIZER                           -->
+<!-- ================================================================= -->
+<section class="audio-tool" id="web-companion">
+  <div class="wrap">
+    <div class="audio-card">
+      <div class="audio-head">
+        <div>
+          <span class="pill-badge launch">Built-In Digital Web Companion</span>
+          <h2 style="margin-top: 0.6rem;">Acoustic Blanket &amp; SOS Overload Mode</h2>
+          <p class="lead" style="font-size: 1.05rem; margin-top: 0.4rem;">
+            Test our synthetic Web Audio generator right in your browser. Zero tracking, zero ads, instant parasympathetic vagus nerve calm:
+          </p>
+        </div>
+        <button class="btn sos-live-btn" onclick="toggleSOS()">
+          🛑 SOS Emergency Dim Mode
+        </button>
+      </div>
+
+      <div class="sound-buttons-row">
+        <button class="sound-btn" id="btn-brown" onclick="playNoise('brown')">
+          🌊 Deep Brown Noise (Waterfall)
+        </button>
+        <button class="sound-btn" id="btn-pink" onclick="playNoise('pink')">
+          🌧️ Soft Pink Noise (Rain)
+        </button>
+        <button class="sound-btn" id="btn-sine" onclick="playNoise('sine')">
+          ✨ 432 Hz Grounding Sine Tone
+        </button>
+        <button class="sound-btn" id="btn-stop" onclick="stopNoise()" style="border-color:#C0392B; color:#C0392B;">
+          ⏹️ Silence Audio
+        </button>
+
+        <div style="display:flex; align-items:center; gap:8px; margin-left:auto;">
+          <span style="font-size: 0.85rem; font-weight:600; color:var(--ink-sub);">Volume:</span>
+          <input type="range" min="0" max="1" step="0.05" value="0.3" id="vol-slider" oninput="setVolume(this.value)" style="width: 110px; accent-color:var(--teal);">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- INVESTOR & BUSINESS BRIEFING SECTION                             -->
+<!-- ================================================================= -->
+<section class="investor" id="investor">
+  <div class="wrap">
+    <div class="investor-badge-row">
+      <span class="pill-badge launch">Executive Pitch &amp; Market Memo</span>
+      <span style="font-size: 0.88rem; color: var(--ink-sub); font-weight:600;">Confidential · Project Lunelle</span>
+    </div>
+
+    <div class="deck-card">
+      <h2>The Business Case for Neurodivergent-Affirming Planning</h2>
+      <div class="gold-pill"></div>
+      <p class="lead">
+        Traditional productivity software and stationery systematically fail neurodivergent adults because they treat executive dysfunction as a moral failing. Lunelle captures an underserved, high-loyalty demographic with unprecedented unit economics.
+      </p>
+
+      <div class="kpi-grid">
+        <div class="kpi-box">
+          <div class="kpi-num">1.2B</div>
+          <div class="kpi-label">Global Neurodivergent Pop. (15–20%)</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-num">$13.4B</div>
+          <div class="kpi-label">Digital Planning &amp; Wellness TAM</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-num">96.4%</div>
+          <div class="kpi-label">Gross Margin on Digital PDF Kits</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-num">34%</div>
+          <div class="kpi-label">Target Multi-Product Attach Rate</div>
+        </div>
+      </div>
+
+      <div class="biz-pillars">
+        <div class="pillar-card">
+          <h4>1. Organic Growth &amp; Viral CAC</h4>
+          <p>
+            Sensory overload infographics and unboxing reels generate high organic save-and-share rates on Pinterest and TikTok. Customer acquisition cost (CAC) is a fraction of traditional direct-response wellness brands.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <h4>2. Ecosystem LTV Expansion</h4>
+          <p>
+            The Sensory Planner serves as an entry bridge from free lead magnets (Dopamine Menu) into the $18.00 Complete Sanctuary Bundle, with an expansion roadmap into subscription iPad apps and physical keepsake editions.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <h4>3. Defensible IP &amp; Character Moat</h4>
+          <p>
+            Unlike generic Canva templates, Lunelle owns a proprietary 3D-illustrated character asset library and an authentic neurodivergent brand voice that creates fierce emotional brand equity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- PRICING & COMMERCIAL PACKAGES (100% 1-ROW BUTTONS)                -->
+<!-- ================================================================= -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="sec-header">
+      <span class="pill-badge teal">Transparent Commercial Pricing</span>
+      <h2 style="margin-top: 0.85rem;">Choose your sanctuary package</h2>
+      <div class="gold-pill center"></div>
+      <p class="lead">Instant digital delivery. Print it once, use it for a lifetime.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Tier 1 -->
+      <div class="pricing-card">
+        <div>
+          <span class="pill-badge">Single Product</span>
+          <h3 style="margin-top: 0.75rem;">Sensory Self-Care Kit</h3>
+          <p style="font-size: 0.85rem; color: var(--ink-sub); margin-top: 4px;">The complete 11-page printable workbook.</p>
+          <div class="price-val">$9.50</div>
+          <span class="price-period">One-time purchase · Instant PDF download</span>
+
+          <ul class="feature-list">
+            <li><span>✓</span> <strong>All 11 Vector Printable Sheets</strong> (US Letter &amp; A4)</li>
+            <li><span>✓</span> <strong>The 8 Senses Landscape</strong> audit matrix</li>
+            <li><span>✓</span> <strong>Sensory Bandwidth Battery</strong> (Levels 1–5)</li>
+            <li><span>✓</span> <strong>Cut-Out Non-Verbal Wallet Cards</strong></li>
+            <li><span>✓</span> <strong>Full Access to Web Audio Companion</strong></li>
+            <li><span>✓</span> GoodNotes / Notability iPad PDF edition</li>
+          </ul>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="../Lunelle_Sensory_Self_Care_Planner.pdf" target="_blank" class="btn ghost" style="width:100%;">
+            Get Digital Kit · $9.50
+          </a>
+        </div>
+      </div>
+
+      <!-- Tier 2 (Featured) -->
+      <div class="pricing-card featured">
+        <div class="popular-ribbon">Most Popular · Save 48%</div>
+        <div>
+          <span class="pill-badge launch">The Master Sanctuary Suite</span>
+          <h3 style="margin-top: 0.75rem;">Complete Lunelle Bundle</h3>
+          <p style="font-size: 0.85rem; color: var(--ink-sub); margin-top: 4px;">The full Phase 2 neurodivergent planning ecosystem.</p>
+          <div class="price-val">$18.00</div>
+          <span class="price-period">Regular Value $35.00 · Instant Download</span>
+
+          <ul class="feature-list">
+            <li><span>★</span> <strong>Lunelle Sensory Self-Care Planner</strong> (11 Pages)</li>
+            <li><span>★</span> <strong>Lunelle Slow Days Planner</strong> (27 Master Pages)</li>
+            <li><span>★</span> <strong>36 Transition &amp; Shutdown Ritual Cards</strong> (PDF Deck)</li>
+            <li><span>★</span> <strong>Free Dopamine Menu &amp; Habit Frequency Tracker</strong></li>
+            <li><span>★</span> <strong>41 Digital Die-Cut Mascot Stickers</strong> (.PNG)</li>
+            <li><span>★</span> Lifetime access to future updates &amp; revisions</li>
+          </ul>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="#investor" class="btn" style="width:100%;">
+            Get Complete Bundle · $18.00
+          </a>
+        </div>
+      </div>
+
+      <!-- Tier 3 (Investor & Physical Keepsake Concept) -->
+      <div class="pricing-card">
+        <div>
+          <span class="pill-badge">Physical Keepsake Edition</span>
+          <h3 style="margin-top: 0.75rem;">Collector’s Box &amp; Stand</h3>
+          <p style="font-size: 0.85rem; color: var(--ink-sub); margin-top: 4px;">D2C Physical Keepsake (Investor Prototype).</p>
+          <div class="price-val">$34.00</div>
+          <span class="price-period">Physical production roadmap / Pre-order</span>
+
+          <ul class="feature-list">
+            <li><span>✓</span> Includes all Digital Kits &amp; Web Companions</li>
+            <li><span>✓</span> <strong>Solid European Oak Desk Stand</strong> (Angled slot)</li>
+            <li><span>✓</span> <strong>350 gsm Velvet Touch Artboard</strong> cards</li>
+            <li><span>✓</span> Gold foil stamped magnetic keepsake box</li>
+            <li><span>✓</span> 3 sheets of tactile vinyl Lunelle die-cut stickers</li>
+          </ul>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="#investor" class="btn ghost" style="width:100%;">
+            View Physical Roadmap
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- REVIEWS & COMMUNITY VOICES                                        -->
+<!-- ================================================================= -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-header">
+      <span class="pill-badge launch">Community Validation</span>
+      <h2 style="margin-top: 0.85rem;">Loved by sensitive nervous systems</h2>
+      <div class="gold-pill center"></div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p class="review-quote">
+          “For years I thought I had an executive function defect. The 8 Senses Audit showed me that the flickering light above my desk was burning 70% of my energy before 10 AM. This planner changed how I treat myself.”
+        </p>
+        <div class="review-user">
+          <div class="user-avatar">🌸</div>
+          <div>
+            <div class="user-name">Elena R.</div>
+            <div class="user-meta">Late-diagnosed ADHD &amp; UX Designer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <p class="review-quote">
+          “The non-verbal wallet cards are pure genius. I kept one in my badge holder. When I hit sensory overload in an airport, I showed it without speaking and avoided a full panic meltdown.”
+        </p>
+        <div class="review-user">
+          <div class="user-avatar">🌿</div>
+          <div>
+            <div class="user-name">Marcus T.</div>
+            <div class="user-meta">Autistic Software Engineer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <p class="review-quote">
+          “Finally, someone who understands that stimming and lying under a 10kg blanket on the floor is active recovery. The design is so gentle on the eyes. No harsh black ink anywhere.”
+        </p>
+        <div class="review-user">
+          <div class="user-avatar">🦄</div>
+          <div>
+            <div class="user-name">Sarah K.</div>
+            <div class="user-meta">AuDHD Content Creator &amp; Spoonie</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- FAQ & DISCLAIMER                                                  -->
+<!-- ================================================================= -->
+<section class="faq">
+  <div class="wrap">
+    <div class="sec-header">
+      <h2>Frequently Asked Questions</h2>
+      <div class="gold-pill center"></div>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>Do I need an official diagnosis to use this?</h4>
+        <p>Never. Your sensory thresholds and nervous system boundaries are valid regardless of medical paperwork. If you feel easily drained by crowds, noise, lights, or chaotic schedules, this workbook was made for you.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What if I don't own a printer?</h4>
+        <p>The files are optimized for PDF annotation apps like GoodNotes, Notability, and Samsung Notes on iPad or Android tablets. You can also print selected single sheets at your local print shop.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Why is stimming encouraged in this planner?</h4>
+        <p>Stimming is natural autonomic regulation. Occupational science shows that rhythmic rocking, tactile fidgets, and deep pressure actively lower cortisol and regulate neurotransmitters. We celebrate stimming as self-care.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How do I access the digital files after purchase?</h4>
+        <p>You receive instant, perpetual download access to both US Letter and International A4 vector PDFs, along with instructions and the interactive Web Audio companion link.</p>
+      </div>
+    </div>
+
+    <div class="disclaimer-box">
+      <strong>Medical &amp; Well-being Disclaimer:</strong><br>
+      The Lunelle Sensory Self-Care Planner is a gentle self-reflection tool, lifestyle organizer, and educational workbook created for personal comfort. It is not intended to diagnose, treat, cure, or prevent any medical condition or psychiatric disorder, and is not a substitute for professional medical, psychological, or occupational therapy advice. Always consult a qualified healthcare provider regarding your individual health needs.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- FOOTER                                                            -->
+<!-- ================================================================= -->
+<footer class="bottom">
+  <div class="wrap">
+    <div style="display:flex; align-items:center; gap:0.75rem;">
+      <img src="assets/sticker_01_star_diecut.png" style="width:24px; height:24px;" alt="Star">
+      <span><strong>Lunelle Sanctuary Press</strong> · Gentle Planning for Sensitive Minds</span>
+    </div>
+    <div>
+      <span>© 2026 Lunelle. All rights reserved. Made with softness.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================================================================= -->
+<!-- SOS EMERGENCY MODAL OVERLAY                                       -->
+<!-- ================================================================= -->
+<div class="sos-overlay" id="sosModal">
+  <div style="max-width: 480px; width: 100%;">
+    <span style="font-size: 0.85rem; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:2px;">
+      ✦ Lunelle Low-Stimulus Mode ✦
+    </span>
+    <h2 style="font-size: 1.85rem; margin-top: 8px; color: #FFFFFF;">You are safe. Nothing is required.</h2>
+    <p style="font-size: 0.9rem; color: #A8A69E; margin-top: 6px;">
+      Watch the soft circle breathe or close your eyes. Zero demands. Zero decisions.
+    </p>
+
+    <div class="breathe-ring">
+      Breathe
+    </div>
+
+    <div style="background: rgba(255,255,255,0.06); padding: 16px; border-radius: 12px; font-size: 0.85rem; line-height: 1.5; color: #E8E0D2; text-align: left;">
+      • Unclench your jaw right now.<br>
+      • Drop your shoulders down two inches.<br>
+      • Put on earplugs or headphones if you have them.<br>
+      • Place a heavy cushion or blanket over your lap.
+    </div>
+
+    <button class="btn ghost" onclick="toggleSOS()" style="margin-top: 24px; border-color:#FFF; color:#FFF;">
+      Return to Sanctuary Page
+    </button>
+  </div>
+</div>
+
+<!-- ================================================================= -->
+<!-- JAVASCRIPT: WEB AUDIO & SOS LOGIC                                 -->
+<!-- ================================================================= -->
+<script>
+  function toggleSOS() {
+    const el = document.getElementById('sosModal');
+    el.classList.toggle('active');
+  }
+
+  let audioCtx = null;
+  let currentSource = null;
+  let gainNode = null;
+
+  function initAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      gainNode = audioCtx.createGain();
+      gainNode.gain.value = parseFloat(document.getElementById('vol-slider').value);
+      gainNode.connect(audioCtx.destination);
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  function setVolume(v) {
+    if (gainNode) {
+      gainNode.gain.setValueAtTime(parseFloat(v), audioCtx.currentTime);
+    }
+  }
+
+  function stopNoise() {
+    if (currentSource) {
+      try { currentSource.stop(); } catch(e){}
+      currentSource.disconnect();
+      currentSource = null;
+    }
+    document.querySelectorAll('.sound-btn').forEach(b => b.classList.remove('active'));
+  }
+
+  function playNoise(type) {
+    initAudio();
+    stopNoise();
+
+    if (type === 'sine') {
+      const osc = audioCtx.createOscillator();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(432, audioCtx.currentTime);
+      osc.connect(gainNode);
+      osc.start();
+      currentSource = osc;
+      document.getElementById('btn-sine').classList.add('active');
+      return;
+    }
+
+    const bufferSize = audioCtx.sampleRate * 2;
+    const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+    const data = buffer.getChannelData(0);
+
+    if (type === 'brown') {
+      let lastOut = 0.0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        data[i] = (lastOut + (0.02 * white)) / 1.02;
+        lastOut = data[i];
+        data[i] *= 3.5;
+      }
+      document.getElementById('btn-brown').classList.add('active');
+    } else if (type === 'pink') {
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        data[i] = b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362;
+        data[i] *= 0.11;
+        b6 = white * 0.115926;
+      }
+      document.getElementById('btn-pink').classList.add('active');
+    }
+
+    const noiseNode = audioCtx.createBufferSource();
+    noiseNode.buffer = buffer;
+    noiseNode.loop = true;
+    noiseNode.connect(gainNode);
+    noiseNode.start();
+    currentSource = noiseNode;
+  }
+</script>
+
+</body>
+</html>
